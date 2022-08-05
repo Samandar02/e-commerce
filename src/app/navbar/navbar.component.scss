@@ -35,6 +35,24 @@
                 background-color: var(--shadow);
             }
         }
+        .user{
+            span{
+                cursor: pointer;
+            }
+        }
+        position:relative;
+        .count{
+            background-color: red;
+            text-align: center;
+            display: inline-block;
+            position: absolute;
+            width: 20px;
+            height: 16px;
+            border-radius: 12px;
+            color: beige;
+            right: 4px;
+            font-size: 14px;
+        }
     }
 }
 .hero{
@@ -42,6 +60,7 @@
     @include flexbox(space-around,center);
     .banner{
         img{
+            margin: 32px;
             width: 500px;
         }
     }

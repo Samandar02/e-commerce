@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
 
 @Component({
@@ -8,8 +9,8 @@ import { ApiService } from '../services/api.service';
 })
 export class CatigoriesComponent implements OnInit {
 
-  constructor(private apiSvc:ApiService) { }
-  catigories:any[] = [];
+  constructor(private apiSvc:ApiService,private router:Router) { }
+  catigories:any[] = ['all'];
   ngOnInit(): void {
     this.apiSvc.get().subscribe(res=>{
       (res as any[]).forEach(i=>{
@@ -18,6 +19,9 @@ export class CatigoriesComponent implements OnInit {
       })
     })
     console.log(this.catigories)
+  }
+  onSelect(catName:string,index:number){
+    this.router.navigate([''],{queryParams:{id:index,catigorie:catName}})
   }
 
 }

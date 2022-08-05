@@ -1,5 +1,5 @@
 <div class="content">
-    <div *ngFor="let product of products" class="card">
+    <div *ngFor="let product of products|filter:filterBy:searchBy" class="card">
         <ng-container *ngIf="product.title.includes('g')">
             <div class="discount">
                 -12%
@@ -13,7 +13,7 @@
             <p>{{product.price|currency}}</p>
         </div>
         <div class="buttons">
-            <div class="float-btn">
+            <div (click)="addToCard(product)" class="float-btn">
                 Add to card
             </div>
             <div class="float-btn">

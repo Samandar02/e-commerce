@@ -10,7 +10,7 @@
             <span class="material-symbols-outlined gap-m">
                 search
             </span>
-            <input placeholder="Search" type="text">
+            <input #input (change)="onChange(input.value)" placeholder="Search" type="text">
         </div>
         <div class="user gap-m">
             <span class="material-symbols-outlined gap-m">
@@ -19,9 +19,12 @@
             <span class="material-symbols-outlined gap-m">
                 person
             </span>
-            <span class="material-symbols-outlined gap-m">
-                shopping_cart
-            </span>
+            <a routerLink="shopcart">
+                <span class="material-symbols-outlined gap-m">
+                    shopping_cart
+                </span>
+            </a>
+            <span *ngIf="shopCartCount != 0" class="count">{{shopCartCount}}</span>
         </div>
         <div class="shopcart"></div>
     </div>

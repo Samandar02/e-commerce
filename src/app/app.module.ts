@@ -9,6 +9,7 @@ import { CatigoriesComponent } from './catigories/catigories.component';
 import { ProductsComponent } from './products/products.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { DetailComponent } from './products/detail/detail.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DetailComponent } from './products/detail/detail.component';
     CatigoriesComponent,
     ProductsComponent,
     CheckOutComponent,
-    DetailComponent
+    DetailComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StoreService } from 'src/app/services/store.service';
 
 @Component({
   selector: 'app-check-out',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckOutComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private store:StoreService) { }
+  items:any[] = [];
+  amount = 0;
   ngOnInit(): void {
+    this.items = JSON.parse(localStorage.getItem('shopcart')??'')
+    this.checkAmount();
   }
+  checkAmount(){
+    this.items.forEach(item=>{
+      this.amount+=item.price;
+    })
+  }
+
 
 }

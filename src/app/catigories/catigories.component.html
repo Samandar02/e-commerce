@@ -1,8 +1,8 @@
 <div class="catigories">
     <div class="title"><h1 class="primary-color">Catigories</h1></div>
-    <ng-container *ngFor="let catigorie of catigories">
+    <ng-container *ngFor="let catigorie of catigories; index as i">
         <ul>
-            <li>{{catigorie}}</li>
+            <li (click)="onSelect(catigorie,i+1)">{{catigorie}}</li>
         </ul>
     </ng-container>
 </div>
