@@ -1,1 +1,24 @@
-<p>products works!</p>
+<div class="content">
+    <div *ngFor="let product of products" class="card">
+        <ng-container *ngIf="product.title.includes('g')">
+            <div class="discount">
+                -12%
+            </div>
+        </ng-container>
+        <div class="card-header">
+            <img [src]="product.image" alt="s">
+        </div>
+        <div class="card-body">
+            <h4>{{product.title}}</h4>
+            <p>{{product.price|currency}}</p>
+        </div>
+        <div class="buttons">
+            <div class="float-btn">
+                Add to card
+            </div>
+            <div class="float-btn">
+                Detail
+            </div>
+        </div>
+    </div>
+</div>

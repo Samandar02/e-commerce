@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0";
+
+@import "./styles/forms.scss";
+@import './styles/mixins.scss';
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    color: hsl(313deg 49% 34%);
+}
+
+:root{
+    
+    --primary:hsl(311deg 23% 64%);
+    --secondary:hsl(43deg 100% 48%);
+    --shadow:rgb(241, 237, 237);
+
+    
+}
+.primary-color{
+    color: hsl(313deg 49% 34%);
+}
+.secondary-color{
+    color: hsl(311deg 23% 64%);
+}

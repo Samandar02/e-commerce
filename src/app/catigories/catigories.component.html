@@ -1,1 +1,8 @@
-<p>catigories works!</p>
+<div class="catigories">
+    <div class="title"><h1 class="primary-color">Catigories</h1></div>
+    <ng-container *ngFor="let catigorie of catigories">
+        <ul>
+            <li>{{catigorie}}</li>
+        </ul>
+    </ng-container>
+</div>

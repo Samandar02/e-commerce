@@ -1,0 +1,21 @@
+.catigories{
+    float: left;
+    .title{
+        h1{
+            padding: 2.5rem 4px;
+        }
+    }
+    ul{
+        li{
+            list-style: none;
+            padding: 12px;
+            margin: 4px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all .3s linear;
+            &:hover{
+                background-color: var(--primary);
+            }
+        }
+    }
+}
