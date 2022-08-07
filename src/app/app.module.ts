@@ -9,7 +9,9 @@ import { CatigoriesComponent } from './catigories/catigories.component';
 import { ProductsComponent } from './products/products.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { DetailComponent } from './products/detail/detail.component';
-import { FilterPipe } from './filter.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
+import { ApiService } from './services/api.service';
+import { StoreService } from './services/store.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { FilterPipe } from './filter.pipe';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [ApiService,StoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
